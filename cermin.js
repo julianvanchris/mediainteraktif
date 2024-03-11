@@ -71,6 +71,7 @@ function setup() {
   canvas = createCanvas(1095, 450);
   canvas.parent("sim-canvas-container");
   angleMode(DEGREES);
+  canvas.getContext('2d', { willReadFrequently: true });
   
   // c2 = color(63, 191, 191);
   c1 = color(255);
