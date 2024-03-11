@@ -269,7 +269,7 @@ function setup() {
 
   objectButtons.parent("sim-canvas-container");
   objectButtons.position(
-    canvas.position().x - 155,
+    canvas.position().x - 195,
     canvas.position().y + 65
   );
 
