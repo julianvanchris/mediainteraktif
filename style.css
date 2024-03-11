@@ -309,6 +309,7 @@ main {
   width: 1095px;
   background-color: rgba(255, 251, 251, 0.7);
   margin-top: 50px;
+  position: absolute;
 }
 
 #sim-canvas-container .slider {
