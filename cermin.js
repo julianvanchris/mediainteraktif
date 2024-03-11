@@ -71,6 +71,7 @@ function setup() {
   canvas = createCanvas(1095, 450);
   canvas.parent("sim-canvas-container");
   angleMode(DEGREES);
+  
   // c2 = color(63, 191, 191);
   c1 = color(255);
   c2 = color(63, 191, 191);
@@ -86,63 +87,82 @@ function setup() {
   sliderCembung.class("slider");
   sliderCekung.parent("sim-canvas-container");
   sliderCekung.class("slider");
-  sliderCembung.position(-100, -100);
-  sliderCekung.position(-100, -100);
+  sliderCembung.position(-2000, -2000);
+  sliderCekung.position(-2000, -2000);
 
   radiusText = createElement("p", 'Radius &nbsp;' + (sliderCekung.value()/2) + ' cm');
-  radiusText.position(-100, -100);
+  radiusText.parent("sim-canvas-container");
+  radiusText.position(-2000, -2000);
   focusText = createElement("p", 'Focus&nbsp;&nbsp;&nbsp; ' + (rCCekung / 2) / 2 + ' cm');
-  focusText.position(-100, -100);
+  focusText.parent("sim-canvas-container");
+  focusText.position(-2000, -2000);
 
   focusP = createElement("p", 'F');
-  focusP.position(-100, -100);
+  focusP.parent("sim-canvas-container");
+  focusP.position(-2000, -2000);
   lengkungP = createElement("p", 'M');
-  lengkungP.position(-100, -100);
+  lengkungP.parent("sim-canvas-container");
+  lengkungP.position(-2000, -2000);
 
   s = createElement("p", 's');
-  s.position(-100, -100);
+  s.parent("sim-canvas-container");
+  s.position(-2000, -2000);
 
   s_aks = createElement("p", 's`');
-  s_aks.position(-100, -100);
+  s_aks.parent("sim-canvas-container");
+  s_aks.position(-2000, -2000);
 
   formtext1 = createElement("p", 'f');
-  formtext1.position(-100, -100);
+  formtext1.parent("sim-canvas-container");
+  formtext1.position(-2000, -2000);
 
   formtext_ = createElement("p", 'f');
-  formtext_.position(-100, -100);
+  formtext_.parent("sim-canvas-container");
+  formtext_.position(-2000, -2000);
 
   formtext12 = createElement("p", 'f');
-  formtext12.position(-100, -100);
+  formtext12.parent("sim-canvas-container");
+  formtext12.position(-2000, -2000);
 
   formtext_2 = createElement("p", 'f');
-  formtext_2.position(-100, -100);
+  formtext_2.parent("sim-canvas-container");
+  formtext_2.position(-2000, -2000);
 
   formtext13 = createElement("p", 'f');
-  formtext13.position(-100, -100);
+  formtext13.parent("sim-canvas-container");
+  formtext13.position(-2000, -2000);
 
   formtext_3 = createElement("p", 'f');
-  formtext_3.position(-100, -100);
+  formtext_3.parent("sim-canvas-container");
+  formtext_3.position(-2000, -2000);
 
   formtext_s = createElement("p", 'f');
-  formtext_s.position(-100, -100);
+  formtext_s.parent("sim-canvas-container");
+  formtext_s.position(-2000, -2000);
 
   formtext_s_aks = createElement("p", 'f');
-  formtext_s_aks.position(-100, -100);
+  formtext_s_aks.parent("sim-canvas-container");
+  formtext_s_aks.position(-2000, -2000);
 
   formtext_f = createElement("p", 'f');
-  formtext_f.position(-100, -100);
+  formtext_f.parent("sim-canvas-container");
+  formtext_f.position(-2000, -2000);
 
   formtext_plus = createElement("p", 'f');
-  formtext_plus.position(-100, -100);
+  formtext_plus.parent("sim-canvas-container");
+  formtext_plus.position(-2000, -2000);
 
   formtext_equal1 = createElement("p", 'f');
-  formtext_equal1.position(-100, -100);
+  formtext_equal1.parent("sim-canvas-container");
+  formtext_equal1.position(-2000, -2000);
 
   formtext_equal2 = createElement("p", 'f');
-  formtext_equal2.position(-100, -100);
+  formtext_equal2.parent("sim-canvas-container");
+  formtext_equal2.position(-2000, -2000);
 
   checkbox = createCheckbox('Formula', false);
-  checkbox.position(-100, -100);
+  checkbox.parent("sim-canvas-container");
+  checkbox.position(-2000, -2000);
 
   jarak = 300
 
@@ -181,6 +201,8 @@ function setup() {
   currentTitle.class(
     "animate__animated animate__fadeIn"
   );
+
+  currentTitle.parent("sim-canvas-container");
 
   currentTitle.style("font-size", "60px");
   currentTitle.style("color", "#ffffff");
@@ -285,16 +307,20 @@ function draw() {
     sliderCembung.class("slider");
     sliderCekung.parent("sim-canvas-container");
     sliderCekung.class("slider");
-    sliderCembung.position(-100, -100);
-    sliderCekung.position(-100, -100);
+    sliderCembung.position(-2000, -2000);
+    sliderCekung.position(-2000, -2000);
     radiusText = createElement("p", 'Radius &nbsp;' + (sliderCekung.value()/2) + ' cm');
-    radiusText.position(-100, -100);
+    radiusText.parent("sim-canvas-container");
+    radiusText.position(-2000, -2000);
     focusText = createElement("p", 'Focus&nbsp;&nbsp;&nbsp; ' + (rCCekung / 2) / 2 + ' cm');
-    focusText.position(-100, -100);
+    focusText.parent("sim-canvas-container");
+    focusText.position(-2000, -2000);
     focusP = createElement("p", 'F');
-    focusP.position(-100, -100);
+    focusP.parent("sim-canvas-container");
+    focusP.position(-2000, -2000);
     lengkungP = createElement("p", 'M');
-    lengkungP.position(-100, -100);
+    lengkungP.parent("sim-canvas-container");
+    lengkungP.position(-2000, -2000);
   }
   else if (mirrorType === "Cembung") {
     mirrorLayer.clear();
@@ -302,8 +328,10 @@ function draw() {
     mirrorLayer.line(0, height / 2, width, height / 2);
     mirrorLayer.stroke(0, 0, 0);
     mirrorLayer.line(width / 2, 0, width / 2 , height);
-    sliderCembung.position(1150, 280);
-    sliderCekung.position(-100, -100);
+    sliderCembung.parent("sim-canvas-container");
+    sliderCembung.position(950, 100);
+    sliderCekung.parent("sim-canvas-container");
+    sliderCekung.position(-2000, -2000);
     rCCembung = sliderCembung.value();
     hCCembung = sliderCembung.value();
     yCCembung = - sliderCembung.value();
@@ -311,30 +339,34 @@ function draw() {
       radiusText.remove();
     }
     radiusText = createElement("p", 'Radius &nbsp;' + (sliderCembung.value()/2) + ' cm');
+    radiusText.parent("sim-canvas-container");
     radiusText.style("font-size", "30px");
     radiusText.style("color", "#2B4162");
-    radiusText.position(1000, 200);
+    radiusText.position(800, 30);
     if (focusText) {
       focusText.remove();
     }
     focusText = createElement("p", 'Focus&nbsp;&nbsp;&nbsp; ' + (rCCembung / 2) / 2 + ' cm');
+    focusText.parent("sim-canvas-container");
     focusText.style("font-size", "30px");
     focusText.style("color", "#2B4162");
-    focusText.position(1000, 240);
+    focusText.position(800, 60);
     if (focusP) {
       focusP.remove();
     }
     focusP = createElement("p", 'F');
+    focusP.parent("sim-canvas-container");
     focusP.style("font-size", "30px");
     focusP.style("color", "#2B4162");
-    focusP.position(width / 2 + fCCembung + 215, height / 2 + 200);
+    focusP.position(width / 2 + fCCembung - 5, height / 2);
     if (lengkungP) {
       lengkungP.remove();
     }
     lengkungP = createElement("p", 'M');
+    lengkungP.parent("sim-canvas-container");
     lengkungP.style("font-size", "30px");
     lengkungP.style("color", "#2B4162");
-    lengkungP.position(width / 2 + rCCembung + 210, height / 2 + 200);
+    lengkungP.position(width / 2 + rCCembung - 5, height / 2);
     fCCembung = rCCembung / 2;
     
     mirrorLayer.image(cembungMirrorImg, width / 2 - 12, height / 2 + (yCCembung/2), 0, hCCembung);
@@ -347,8 +379,10 @@ function draw() {
     mirrorLayer.line(0, height / 2, width, height / 2);
     mirrorLayer.stroke(0, 0, 0);
     mirrorLayer.line(width / 2, 0, width / 2 , height);
-    sliderCekung.position(1150, 280);
-    sliderCembung.position(-100, -100);
+    sliderCekung.parent("sim-canvas-container");
+    sliderCekung.position(950, 100);
+    sliderCembung.parent("sim-canvas-container");
+    sliderCembung.position(-2000, -2000);
     rCCekung = sliderCekung.value();
     hCCekung = sliderCekung.value();
     yCCekung = - sliderCekung.value();
@@ -356,30 +390,34 @@ function draw() {
       radiusText.remove();
     }
     radiusText = createElement("p", 'Radius &nbsp;' + (sliderCekung.value()/2) + ' cm');
+    radiusText.parent("sim-canvas-container");
     radiusText.style("font-size", "30px");
     radiusText.style("color", "#2B4162");
-    radiusText.position(1000, 200);
+    radiusText.position(800, 30);
     if (focusText) {
       focusText.remove();
     }
     focusText = createElement("p", 'Focus&nbsp;&nbsp;&nbsp; ' + (rCCekung / 2) / 2 + ' cm');
+    focusText.parent("sim-canvas-container");
     focusText.style("font-size", "30px");
     focusText.style("color", "#2B4162");
-    focusText.position(1000, 240);
+    focusText.position(800, 60);
     if (focusP) {
       focusP.remove();
     }
     focusP = createElement("p", 'F');
+    focusP.parent("sim-canvas-container");
     focusP.style("font-size", "30px");
     focusP.style("color", "#2B4162");
-    focusP.position(width / 2 - fCCekung + 215, height / 2 + 200);
+    focusP.position(width / 2 - fCCekung - 5, height / 2);
     if (lengkungP) {
       lengkungP.remove();
     }
     lengkungP = createElement("p", 'M');
+    lengkungP.parent("sim-canvas-container");
     lengkungP.style("font-size", "30px");
     lengkungP.style("color", "#2B4162");
-    lengkungP.position(width / 2 - rCCekung + 210, height / 2 + 200);
+    lengkungP.position(width / 2 - rCCekung - 5, height / 2);
     fCCekung = rCCekung / 2;
     mirrorLayer.image(cekungMirrorImg, width / 2 - 82, height / 2 + (yCCekung/2), 0, hCCekung);
     mirrorLayer.image(fokusImg, width / 2 - fCCekung + 5, height / 2 + 5, -10, -10);
@@ -414,51 +452,70 @@ function draw() {
     formtext_equal1.remove();
     formtext_equal2.remove();
     s = createElement("p", 's');
-    s.position(-100, -100);
+    s.parent("sim-canvas-container");
+    s.position(-2000, -2000);
     s_aks = createElement("p", 's`');
-    s_aks.position(-100, -100);
+    s_aks.parent("sim-canvas-container");
+    s_aks.position(-2000, -2000);
     checkbox = createCheckbox('Formula', false);
-    checkbox.position(-100, -100);
+    checkbox.parent("sim-canvas-container");
+    checkbox.position(-2000, -2000);
     formtext1 = createElement("p", 'f');
-    formtext1.position(-100, -100);
+    formtext1.parent("sim-canvas-container");
+    formtext1.position(-2000, -2000);
     formtext_ = createElement("p", 'f');
-    formtext_.position(-100, -100);
+    formtext_.parent("sim-canvas-container");
+    formtext_.position(-2000, -2000);
     formtext12 = createElement("p", 'f');
-    formtext12.position(-100, -100);
+    formtext12.parent("sim-canvas-container");
+    formtext12.position(-2000, -2000);
     formtext_2 = createElement("p", 'f');
-    formtext_2.position(-100, -100);
+    formtext_2.parent("sim-canvas-container");
+    formtext_2.position(-2000, -2000);
     formtext13 = createElement("p", 'f');
-    formtext13.position(-100, -100);
+    formtext13.parent("sim-canvas-container");
+    formtext13.position(-2000, -2000);
     formtext_3 = createElement("p", 'f');
-    formtext_3.position(-100, -100);
+    formtext_3.parent("sim-canvas-container");
+    formtext_3.position(-2000, -2000);
     formtext_s = createElement("p", 'f');
-    formtext_s.position(-100, -100);
+    formtext_s.parent("sim-canvas-container");
+    formtext_s.position(-2000, -2000);
     formtext_s_aks = createElement("p", 'f');
-    formtext_s_aks.position(-100, -100);
+    formtext_s_aks.parent("sim-canvas-container");
+    formtext_s_aks.position(-2000, -2000);
     formtext_f = createElement("p", 'f');
-    formtext_f.position(-100, -100);
+    formtext_f.parent("sim-canvas-container");
+    formtext_f.position(-2000, -2000);
     formtext_plus = createElement("p", 'f');
-    formtext_plus.position(-100, -100);
+    formtext_plus.parent("sim-canvas-container");
+    formtext_plus.position(-2000, -2000);
     formtext_equal1 = createElement("p", 'f');
-    formtext_equal1.position(-100, -100);
+    formtext_equal1.parent("sim-canvas-container");
+    formtext_equal1.position(-2000, -2000);
     formtext_equal2 = createElement("p", 'f');
-    formtext_equal2.position(-100, -100);
+    formtext_equal2.parent("sim-canvas-container");
+    formtext_equal2.position(-2000, -2000);
     sliderCembung = createSlider(200, 500, 400);
     sliderCekung = createSlider(200, 500, 300);
     sliderCembung.parent("sim-canvas-container");
     sliderCembung.class("slider");
     sliderCekung.parent("sim-canvas-container");
     sliderCekung.class("slider");
-    sliderCembung.position(-100, -100);
-    sliderCekung.position(-100, -100);
+    sliderCembung.position(-2000, -2000);
+    sliderCekung.position(-2000, -2000);
     radiusText = createElement("p", 'Radius &nbsp;' + (sliderCekung.value()/2) + ' cm');
-    radiusText.position(-100, -100);
+    radiusText.parent("sim-canvas-container");
+    radiusText.position(-2000, -2000);
     focusText = createElement("p", 'Focus&nbsp;&nbsp;&nbsp; ' + (rCCekung / 2) / 2 + ' cm');
-    focusText.position(-100, -100);
+    focusText.parent("sim-canvas-container");
+    focusText.position(-2000, -2000);
     focusP = createElement("p", 'F');
-    focusP.position(-100, -100);
+    focusP.parent("sim-canvas-container");
+    focusP.position(-2000, -2000);
     lengkungP = createElement("p", 'M');
-    lengkungP.position(-100, -100);
+    lengkungP.parent("sim-canvas-container");
+    lengkungP.position(-2000, -2000);
   }
   if (objectType === "Kotak") {
     objectLayer.clear();
@@ -591,7 +648,8 @@ function draw() {
       mirrorLayer.drawingContext.setLineDash([]);
       mirrorLayer.strokeWeight(1);
 
-      checkbox.position(220, 150);
+      checkbox.parent("sim-canvas-container");
+      checkbox.position(0, -50);
 
       const formula = checkbox.checked();
   
@@ -602,9 +660,10 @@ function draw() {
     
         sJarak = (map(xKotak, 417.5, 0, 52, 265));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+        s.parent("sim-canvas-container");
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
-        s.position(240, 200);
+        s.position(20, 10);
   
         if (s_aks) {
           s_aks.remove();
@@ -612,9 +671,10 @@ function draw() {
     
         s_aksJarak = (map(xKotak, 417.5, 0, 52, 265)) * (-1);
         s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
-        s_aks.position(240, 230);
+        s_aks.position(20, 50);
       } else {
         s.hide();
         s_aks.hide();
@@ -656,7 +716,7 @@ function draw() {
       let extendedX = width / 2 + fCCembung - extendedLength * cos(angle);
       let extendedY = height / 2 + extendedLength * sin(angle);      
 
-      mirrorLayer.stroke(255, 0, 0);
+      mirrorLayer.stroke(0, 0, 0);
       mirrorLayer.strokeWeight(2);
       mirrorLayer.drawingContext.setLineDash([5, 5]);
       mirrorLayer.line(width / 2 + fCCembung, height / 2, extendedX, extendedY);
@@ -702,7 +762,8 @@ function draw() {
       xIntersect2 = (b4 - b3)/(m3 - m4);  
       yIntersect2 = (m4 * xIntersect2) + b4;
 
-      checkbox.position(220, 150);
+      checkbox.parent("sim-canvas-container");
+      checkbox.position(0, -50);
 
       const formula = checkbox.checked();
   
@@ -713,9 +774,10 @@ function draw() {
     
         sJarak = (map(xKotak, 417.5, 0, 52, 265));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+        s.parent("sim-canvas-container");
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
-        s.position(240, 200);
+        s.position(20, 10);
   
         if (s_aks) {
           s_aks.remove();
@@ -723,16 +785,18 @@ function draw() {
     
         s_aksJarak = (map(xIntersect2 -25, 417.5, 0, 52, 265));
         s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
-        s_aks.position(240, 230);
+        s_aks.position(20, 50);
 
         if (formtext1) {
           formtext1.remove();
         }
   
         formtext1 = createElement("p", '1');
-        formtext1.position(267, 450);
+        formtext1.parent("sim-canvas-container");
+        formtext1.position(47, 270);
         formtext1.style("font-size", "30px");
         formtext1.style("color", "#2B4162");
 
@@ -741,7 +805,8 @@ function draw() {
         }
 
         formtext_ = createElement("p", '__');
-        formtext_.position(260, 460);
+        formtext_.parent("sim-canvas-container");
+        formtext_.position(40, 280);
         formtext_.style("font-size", "30px");
         formtext_.style("color", "#2B4162");
 
@@ -750,7 +815,8 @@ function draw() {
         }
 
         formtext_s = createElement("p", nf(sJarak, 1, 2));
-        formtext_s.position(240, 495);
+        formtext_s.parent("sim-canvas-container");
+        formtext_s.position(20, 315);
         formtext_s.style("font-size", "30px");
         formtext_s.style("color", "#2B4162");
         
@@ -759,7 +825,8 @@ function draw() {
         }
 
         formtext_plus = createElement("p", '+');
-        formtext_plus.position(330, 455);
+        formtext_plus.parent("sim-canvas-container");
+        formtext_plus.position(110, 275);
         formtext_plus.style("font-size", "50px");
         formtext_plus.style("color", "#2B4162");
 
@@ -768,7 +835,8 @@ function draw() {
         }
 
         formtext12 = createElement("p", '1');
-        formtext12.position(387, 450);
+        formtext12.parent("sim-canvas-container");
+        formtext12.position(165, 270);
         formtext12.style("font-size", "30px");
         formtext12.style("color", "#2B4162");
 
@@ -777,7 +845,8 @@ function draw() {
         }
 
         formtext_2 = createElement("p", '__');
-        formtext_2.position(380, 460);
+        formtext_2.parent("sim-canvas-container");
+        formtext_2.position(157, 280);
         formtext_2.style("font-size", "30px");
         formtext_2.style("color", "#2B4162");
 
@@ -786,7 +855,8 @@ function draw() {
         }
 
         formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-        formtext_s_aks.position(360, 495);
+        formtext_s_aks.parent("sim-canvas-container");
+        formtext_s_aks.position(140, 315);
         formtext_s_aks.style("font-size", "30px");
         formtext_s_aks.style("color", "#2B4162");
 
@@ -795,7 +865,8 @@ function draw() {
         }
 
         formtext_equal1 = createElement("p", '~');
-        formtext_equal1.position(440, 450);
+        formtext_equal1.parent("sim-canvas-container");
+        formtext_equal1.position(220, 270);
         formtext_equal1.style("font-size", "50px");
         formtext_equal1.style("color", "#2B4162");
 
@@ -803,7 +874,8 @@ function draw() {
           formtext_equal2.remove();
         }
         formtext_equal2 = createElement("p", '~');
-        formtext_equal2.position(440, 460);
+        formtext_equal2.parent("sim-canvas-container");
+        formtext_equal2.position(220, 280);
         formtext_equal2.style("font-size", "50px");
         formtext_equal2.style("color", "#2B4162");
 
@@ -812,7 +884,8 @@ function draw() {
         }
 
         formtext13 = createElement("p", '1');
-        formtext13.position(497, 450);
+        formtext13.parent("sim-canvas-container");
+        formtext13.position(277, 270);
         formtext13.style("font-size", "30px");
         formtext13.style("color", "#2B4162");
 
@@ -821,7 +894,8 @@ function draw() {
         }
 
         formtext_3 = createElement("p", '__');
-        formtext_3.position(490, 460);
+        formtext_3.parent("sim-canvas-container");
+        formtext_3.position(270, 280);
         formtext_3.style("font-size", "30px");
         formtext_3.style("color", "#2B4162");
 
@@ -830,7 +904,8 @@ function draw() {
         }
 
         formtext_f = createElement("p", ((rCCembung / 2) / 2) * (-1));
-        formtext_f.position(480, 495);
+        formtext_f.parent("sim-canvas-container");
+        formtext_f.position(260, 315);
         formtext_f.style("font-size", "30px");
         formtext_f.style("color", "#2B4162");
       } else {
@@ -986,7 +1061,9 @@ function draw() {
         xIntersect2 = (b4 - b3)/(m3 - m4);
         yIntersect2 = (m4 * xIntersect2) + b4;
 
-        checkbox.position(220, 150);
+        checkbox.parent("sim-canvas-container");
+
+        checkbox.position(0, -50);
 
         const formula = checkbox.checked();
     
@@ -997,25 +1074,28 @@ function draw() {
       
           sJarak = (map(xKotak, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+          s.parent("sim-canvas-container");
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
-          s.position(240, 200);
+          s.position(20, 10);
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 - 27, 417.5, 0, 52, 265));
           s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
-          s_aks.position(240, 230);
+          s_aks.position(20, 50);
 
           if (formtext1) {
             formtext1.remove();
           }
     
           formtext1 = createElement("p", '1');
-          formtext1.position(887, 450);
+          formtext1.parent("sim-canvas-container");
+          formtext1.position(670, 270);
           formtext1.style("font-size", "30px");
           formtext1.style("color", "#2B4162");
   
@@ -1024,7 +1104,8 @@ function draw() {
           }
   
           formtext_ = createElement("p", '__');
-          formtext_.position(880, 460);
+          formtext_.parent("sim-canvas-container");
+          formtext_.position(663, 280);
           formtext_.style("font-size", "30px");
           formtext_.style("color", "#2B4162");
   
@@ -1033,7 +1114,8 @@ function draw() {
           }
   
           formtext_s = createElement("p", nf(sJarak, 1, 2));
-          formtext_s.position(860, 495);
+          formtext_s.parent("sim-canvas-container");
+          formtext_s.position(643, 315);
           formtext_s.style("font-size", "30px");
           formtext_s.style("color", "#2B4162");
           
@@ -1042,7 +1124,8 @@ function draw() {
           }
   
           formtext_plus = createElement("p", '+');
-          formtext_plus.position(950, 455);
+          formtext_plus.parent("sim-canvas-container");
+          formtext_plus.position(733, 275);
           formtext_plus.style("font-size", "50px");
           formtext_plus.style("color", "#2B4162");
   
@@ -1051,7 +1134,8 @@ function draw() {
           }
   
           formtext12 = createElement("p", '1');
-          formtext12.position(1007, 450);
+          formtext12.parent("sim-canvas-container");
+          formtext12.position(788, 270);
           formtext12.style("font-size", "30px");
           formtext12.style("color", "#2B4162");
   
@@ -1060,7 +1144,8 @@ function draw() {
           }
   
           formtext_2 = createElement("p", '__');
-          formtext_2.position(1000, 460);
+          formtext_2.parent("sim-canvas-container");
+          formtext_2.position(780, 280);
           formtext_2.style("font-size", "30px");
           formtext_2.style("color", "#2B4162");
   
@@ -1069,7 +1154,8 @@ function draw() {
           }
   
           formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-          formtext_s_aks.position(980, 495);
+          formtext_s_aks.parent("sim-canvas-container");
+          formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
           formtext_s_aks.style("color", "#2B4162");
   
@@ -1078,7 +1164,8 @@ function draw() {
           }
   
           formtext_equal1 = createElement("p", '~');
-          formtext_equal1.position(1060, 450);
+          formtext_equal1.parent("sim-canvas-container");
+          formtext_equal1.position(843, 270);
           formtext_equal1.style("font-size", "50px");
           formtext_equal1.style("color", "#2B4162");
   
@@ -1086,7 +1173,8 @@ function draw() {
             formtext_equal2.remove();
           }
           formtext_equal2 = createElement("p", '~');
-          formtext_equal2.position(1060, 460);
+          formtext_equal2.parent("sim-canvas-container");
+          formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
   
@@ -1095,7 +1183,8 @@ function draw() {
           }
   
           formtext13 = createElement("p", '1');
-          formtext13.position(1117, 450);
+          formtext13.parent("sim-canvas-container");
+          formtext13.position(900, 270);
           formtext13.style("font-size", "30px");
           formtext13.style("color", "#2B4162");
   
@@ -1104,7 +1193,8 @@ function draw() {
           }
   
           formtext_3 = createElement("p", '__');
-          formtext_3.position(1110, 460);
+          formtext_3.parent("sim-canvas-container");
+          formtext_3.position(893, 280);
           formtext_3.style("font-size", "30px");
           formtext_3.style("color", "#2B4162");
   
@@ -1113,7 +1203,8 @@ function draw() {
           }
   
           formtext_f = createElement("p", ((rCCekung / 2) / 2));
-          formtext_f.position(1110, 495);
+          formtext_f.parent("sim-canvas-container");
+          formtext_f.position(893, 315);
           formtext_f.style("font-size", "30px");
           formtext_f.style("color", "#2B4162");
         } else {
@@ -1154,7 +1245,9 @@ function draw() {
         xIntersect2 = (b4 - b3)/(m3 - m4);
         yIntersect2 = (m4 * xIntersect2) + b4;
 
-        checkbox.position(220, 150);
+        checkbox.parent("sim-canvas-container");
+
+        checkbox.position(0, -50);
 
         const formula = checkbox.checked();
     
@@ -1165,25 +1258,28 @@ function draw() {
       
           sJarak = (map(xKotak, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+          s.parent("sim-canvas-container");
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
-          s.position(240, 200);
+          s.position(20, 10);
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 + 10, 417.5, 0, 52, 265));
           s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
-          s_aks.position(240, 230);
+          s_aks.position(20, 50);
 
           if (formtext1) {
             formtext1.remove();
           }
     
           formtext1 = createElement("p", '1');
-          formtext1.position(887, 450);
+          formtext1.parent("sim-canvas-container");
+          formtext1.position(670, 270);
           formtext1.style("font-size", "30px");
           formtext1.style("color", "#2B4162");
   
@@ -1192,7 +1288,8 @@ function draw() {
           }
   
           formtext_ = createElement("p", '__');
-          formtext_.position(880, 460);
+          formtext_.parent("sim-canvas-container");
+          formtext_.position(663, 280);
           formtext_.style("font-size", "30px");
           formtext_.style("color", "#2B4162");
   
@@ -1201,7 +1298,8 @@ function draw() {
           }
   
           formtext_s = createElement("p", nf(sJarak, 1, 2));
-          formtext_s.position(860, 495);
+          formtext_s.parent("sim-canvas-container");
+          formtext_s.position(643, 315);
           formtext_s.style("font-size", "30px");
           formtext_s.style("color", "#2B4162");
           
@@ -1210,7 +1308,8 @@ function draw() {
           }
   
           formtext_plus = createElement("p", '+');
-          formtext_plus.position(950, 455);
+          formtext_plus.parent("sim-canvas-container");
+          formtext_plus.position(733, 275);
           formtext_plus.style("font-size", "50px");
           formtext_plus.style("color", "#2B4162");
   
@@ -1219,7 +1318,8 @@ function draw() {
           }
   
           formtext12 = createElement("p", '1');
-          formtext12.position(1007, 450);
+          formtext12.parent("sim-canvas-container");
+          formtext12.position(788, 270);
           formtext12.style("font-size", "30px");
           formtext12.style("color", "#2B4162");
   
@@ -1228,7 +1328,8 @@ function draw() {
           }
   
           formtext_2 = createElement("p", '__');
-          formtext_2.position(1000, 460);
+          formtext_2.parent("sim-canvas-container");
+          formtext_2.position(780, 280);
           formtext_2.style("font-size", "30px");
           formtext_2.style("color", "#2B4162");
   
@@ -1237,7 +1338,8 @@ function draw() {
           }
   
           formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-          formtext_s_aks.position(980, 495);
+          formtext_s_aks.parent("sim-canvas-container");
+          formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
           formtext_s_aks.style("color", "#2B4162");
   
@@ -1246,7 +1348,8 @@ function draw() {
           }
   
           formtext_equal1 = createElement("p", '~');
-          formtext_equal1.position(1060, 450);
+          formtext_equal1.parent("sim-canvas-container");
+          formtext_equal1.position(843, 270);
           formtext_equal1.style("font-size", "50px");
           formtext_equal1.style("color", "#2B4162");
   
@@ -1254,7 +1357,8 @@ function draw() {
             formtext_equal2.remove();
           }
           formtext_equal2 = createElement("p", '~');
-          formtext_equal2.position(1060, 460);
+          formtext_equal2.parent("sim-canvas-container");
+          formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
   
@@ -1263,7 +1367,8 @@ function draw() {
           }
   
           formtext13 = createElement("p", '1');
-          formtext13.position(1117, 450);
+          formtext13.parent("sim-canvas-container");
+          formtext13.position(900, 270);
           formtext13.style("font-size", "30px");
           formtext13.style("color", "#2B4162");
   
@@ -1272,7 +1377,8 @@ function draw() {
           }
   
           formtext_3 = createElement("p", '__');
-          formtext_3.position(1110, 460);
+          formtext_3.parent("sim-canvas-container");
+          formtext_3.position(893, 280);
           formtext_3.style("font-size", "30px");
           formtext_3.style("color", "#2B4162");
   
@@ -1281,7 +1387,8 @@ function draw() {
           }
   
           formtext_f = createElement("p", ((rCCekung / 2) / 2));
-          formtext_f.position(1110, 495);
+          formtext_f.parent("sim-canvas-container");
+          formtext_f.position(893, 315);
           formtext_f.style("font-size", "30px");
           formtext_f.style("color", "#2B4162");
         } else {
@@ -1435,7 +1542,8 @@ function draw() {
       mirrorLayer.drawingContext.setLineDash([]);
       mirrorLayer.strokeWeight(1);
 
-      checkbox.position(220, 150);
+      checkbox.parent("sim-canvas-container");
+      checkbox.position(0, -50);
 
       const formula = checkbox.checked();
   
@@ -1446,9 +1554,10 @@ function draw() {
     
         sJarak = (map(xSegitiga, 417.5, 0, 40, 250));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+        s.parent("sim-canvas-container");
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
-        s.position(240, 200);
+        s.position(20, 10);
   
         if (s_aks) {
           s_aks.remove();
@@ -1456,9 +1565,10 @@ function draw() {
     
         s_aksJarak = (map(xSegitiga, 417.5, 0, 40, 250)) * (-1);
         s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
-        s_aks.position(240, 230);       
+        s_aks.position(20, 50);       
       } else {
         s.hide();
         s_aks.hide();
@@ -1546,7 +1656,8 @@ function draw() {
       xIntersect2 = (b4 - b3)/(m3 - m4);
       yIntersect2 = (m4 * xIntersect2) + b4;
 
-      checkbox.position(220, 150);
+      checkbox.parent("sim-canvas-container");
+      checkbox.position(0, -50);
 
       const formula = checkbox.checked();
   
@@ -1555,28 +1666,31 @@ function draw() {
           s.remove();
         }
     
-        sJarak = (map(xSegitiga, 417.5, 0, 40, 250));
+        sJarak = (map(xKotak, 417.5, 0, 52, 265));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+        s.parent("sim-canvas-container");
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
-        s.position(240, 200);
+        s.position(20, 10);
   
         if (s_aks) {
           s_aks.remove();
         }
     
-        s_aksJarak = (map(xIntersect2 - 25, 417.5, 0, 40, 250));
+        s_aksJarak = (map(xIntersect2 -25, 417.5, 0, 52, 265));
         s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
-        s_aks.position(240, 230);
+        s_aks.position(20, 50);
 
         if (formtext1) {
           formtext1.remove();
         }
   
         formtext1 = createElement("p", '1');
-        formtext1.position(267, 450);
+        formtext1.parent("sim-canvas-container");
+        formtext1.position(47, 270);
         formtext1.style("font-size", "30px");
         formtext1.style("color", "#2B4162");
 
@@ -1585,7 +1699,8 @@ function draw() {
         }
 
         formtext_ = createElement("p", '__');
-        formtext_.position(260, 460);
+        formtext_.parent("sim-canvas-container");
+        formtext_.position(40, 280);
         formtext_.style("font-size", "30px");
         formtext_.style("color", "#2B4162");
 
@@ -1594,7 +1709,8 @@ function draw() {
         }
 
         formtext_s = createElement("p", nf(sJarak, 1, 2));
-        formtext_s.position(240, 495);
+        formtext_s.parent("sim-canvas-container");
+        formtext_s.position(20, 315);
         formtext_s.style("font-size", "30px");
         formtext_s.style("color", "#2B4162");
         
@@ -1603,7 +1719,8 @@ function draw() {
         }
 
         formtext_plus = createElement("p", '+');
-        formtext_plus.position(330, 455);
+        formtext_plus.parent("sim-canvas-container");
+        formtext_plus.position(110, 275);
         formtext_plus.style("font-size", "50px");
         formtext_plus.style("color", "#2B4162");
 
@@ -1612,7 +1729,8 @@ function draw() {
         }
 
         formtext12 = createElement("p", '1');
-        formtext12.position(387, 450);
+        formtext12.parent("sim-canvas-container");
+        formtext12.position(165, 270);
         formtext12.style("font-size", "30px");
         formtext12.style("color", "#2B4162");
 
@@ -1621,7 +1739,8 @@ function draw() {
         }
 
         formtext_2 = createElement("p", '__');
-        formtext_2.position(380, 460);
+        formtext_2.parent("sim-canvas-container");
+        formtext_2.position(157, 280);
         formtext_2.style("font-size", "30px");
         formtext_2.style("color", "#2B4162");
 
@@ -1630,7 +1749,8 @@ function draw() {
         }
 
         formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-        formtext_s_aks.position(360, 495);
+        formtext_s_aks.parent("sim-canvas-container");
+        formtext_s_aks.position(140, 315);
         formtext_s_aks.style("font-size", "30px");
         formtext_s_aks.style("color", "#2B4162");
 
@@ -1639,7 +1759,8 @@ function draw() {
         }
 
         formtext_equal1 = createElement("p", '~');
-        formtext_equal1.position(440, 450);
+        formtext_equal1.parent("sim-canvas-container");
+        formtext_equal1.position(220, 270);
         formtext_equal1.style("font-size", "50px");
         formtext_equal1.style("color", "#2B4162");
 
@@ -1647,7 +1768,8 @@ function draw() {
           formtext_equal2.remove();
         }
         formtext_equal2 = createElement("p", '~');
-        formtext_equal2.position(440, 460);
+        formtext_equal2.parent("sim-canvas-container");
+        formtext_equal2.position(220, 280);
         formtext_equal2.style("font-size", "50px");
         formtext_equal2.style("color", "#2B4162");
 
@@ -1656,7 +1778,8 @@ function draw() {
         }
 
         formtext13 = createElement("p", '1');
-        formtext13.position(497, 450);
+        formtext13.parent("sim-canvas-container");
+        formtext13.position(277, 270);
         formtext13.style("font-size", "30px");
         formtext13.style("color", "#2B4162");
 
@@ -1665,7 +1788,8 @@ function draw() {
         }
 
         formtext_3 = createElement("p", '__');
-        formtext_3.position(490, 460);
+        formtext_3.parent("sim-canvas-container");
+        formtext_3.position(270, 280);
         formtext_3.style("font-size", "30px");
         formtext_3.style("color", "#2B4162");
 
@@ -1674,7 +1798,8 @@ function draw() {
         }
 
         formtext_f = createElement("p", ((rCCembung / 2) / 2) * (-1));
-        formtext_f.position(480, 495);
+        formtext_f.parent("sim-canvas-container");
+        formtext_f.position(260, 315);
         formtext_f.style("font-size", "30px");
         formtext_f.style("color", "#2B4162");
       } else {
@@ -1830,7 +1955,8 @@ function draw() {
         xIntersect2 = (b4 - b3)/(m3 - m4);
         yIntersect2 = (m4 * xIntersect2) + b4;
 
-        checkbox.position(220, 150);
+        checkbox.parent("sim-canvas-container");
+        checkbox.position(0, -50);
 
         const formula = checkbox.checked();
     
@@ -1839,27 +1965,30 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xSegitiga, 417.5, 0, 40, 250));
+          sJarak = (map(xKotak, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+          s.parent("sim-canvas-container");
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
-          s.position(240, 200);
+          s.position(20, 10);
           if (s_aks) {
             s_aks.remove();
           }
       
-          s_aksJarak = (map(xIntersect2 - 45, 417.5, 0, 40, 250));
+          s_aksJarak = (map(xIntersect2 - 27, 417.5, 0, 52, 265));
           s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
-          s_aks.position(240, 230);
+          s_aks.position(20, 50);
 
           if (formtext1) {
             formtext1.remove();
           }
     
           formtext1 = createElement("p", '1');
-          formtext1.position(887, 450);
+          formtext1.parent("sim-canvas-container");
+          formtext1.position(670, 270);
           formtext1.style("font-size", "30px");
           formtext1.style("color", "#2B4162");
   
@@ -1868,7 +1997,8 @@ function draw() {
           }
   
           formtext_ = createElement("p", '__');
-          formtext_.position(880, 460);
+          formtext_.parent("sim-canvas-container");
+          formtext_.position(663, 280);
           formtext_.style("font-size", "30px");
           formtext_.style("color", "#2B4162");
   
@@ -1877,7 +2007,8 @@ function draw() {
           }
   
           formtext_s = createElement("p", nf(sJarak, 1, 2));
-          formtext_s.position(860, 495);
+          formtext_s.parent("sim-canvas-container");
+          formtext_s.position(643, 315);
           formtext_s.style("font-size", "30px");
           formtext_s.style("color", "#2B4162");
           
@@ -1886,7 +2017,8 @@ function draw() {
           }
   
           formtext_plus = createElement("p", '+');
-          formtext_plus.position(950, 455);
+          formtext_plus.parent("sim-canvas-container");
+          formtext_plus.position(733, 275);
           formtext_plus.style("font-size", "50px");
           formtext_plus.style("color", "#2B4162");
   
@@ -1895,7 +2027,8 @@ function draw() {
           }
   
           formtext12 = createElement("p", '1');
-          formtext12.position(1007, 450);
+          formtext12.parent("sim-canvas-container");
+          formtext12.position(788, 270);
           formtext12.style("font-size", "30px");
           formtext12.style("color", "#2B4162");
   
@@ -1904,7 +2037,8 @@ function draw() {
           }
   
           formtext_2 = createElement("p", '__');
-          formtext_2.position(1000, 460);
+          formtext_2.parent("sim-canvas-container");
+          formtext_2.position(780, 280);
           formtext_2.style("font-size", "30px");
           formtext_2.style("color", "#2B4162");
   
@@ -1913,7 +2047,8 @@ function draw() {
           }
   
           formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-          formtext_s_aks.position(980, 495);
+          formtext_s_aks.parent("sim-canvas-container");
+          formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
           formtext_s_aks.style("color", "#2B4162");
   
@@ -1922,7 +2057,8 @@ function draw() {
           }
   
           formtext_equal1 = createElement("p", '~');
-          formtext_equal1.position(1060, 450);
+          formtext_equal1.parent("sim-canvas-container");
+          formtext_equal1.position(843, 270);
           formtext_equal1.style("font-size", "50px");
           formtext_equal1.style("color", "#2B4162");
   
@@ -1930,7 +2066,8 @@ function draw() {
             formtext_equal2.remove();
           }
           formtext_equal2 = createElement("p", '~');
-          formtext_equal2.position(1060, 460);
+          formtext_equal2.parent("sim-canvas-container");
+          formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
   
@@ -1939,7 +2076,8 @@ function draw() {
           }
   
           formtext13 = createElement("p", '1');
-          formtext13.position(1117, 450);
+          formtext13.parent("sim-canvas-container");
+          formtext13.position(900, 270);
           formtext13.style("font-size", "30px");
           formtext13.style("color", "#2B4162");
   
@@ -1948,7 +2086,8 @@ function draw() {
           }
   
           formtext_3 = createElement("p", '__');
-          formtext_3.position(1110, 460);
+          formtext_3.parent("sim-canvas-container");
+          formtext_3.position(893, 280);
           formtext_3.style("font-size", "30px");
           formtext_3.style("color", "#2B4162");
   
@@ -1957,7 +2096,8 @@ function draw() {
           }
   
           formtext_f = createElement("p", ((rCCekung / 2) / 2));
-          formtext_f.position(1110, 495);
+          formtext_f.parent("sim-canvas-container");
+          formtext_f.position(893, 315);
           formtext_f.style("font-size", "30px");
           formtext_f.style("color", "#2B4162");
         } else {
@@ -1998,7 +2138,8 @@ function draw() {
         xIntersect2 = (b4 - b3)/(m3 - m4);
         yIntersect2 = (m4 * xIntersect2) + b4;
 
-        checkbox.position(220, 150);
+        checkbox.parent("sim-canvas-container");
+        checkbox.position(0, -50);
 
         const formula = checkbox.checked();
     
@@ -2007,27 +2148,30 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xSegitiga, 417.5, 0, 40, 250));
+          sJarak = (map(xKotak, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+          s.parent("sim-canvas-container");
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
-          s.position(240, 200);
+          s.position(20, 10);
           if (s_aks) {
             s_aks.remove();
           }
       
-          s_aksJarak = (map(xIntersect2 - 90, 417.5, 0, 40, 250));
+          s_aksJarak = (map(xIntersect2 - 27, 417.5, 0, 52, 265));
           s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
-          s_aks.position(240, 230);
+          s_aks.position(20, 50);
 
           if (formtext1) {
             formtext1.remove();
           }
     
           formtext1 = createElement("p", '1');
-          formtext1.position(887, 450);
+          formtext1.parent("sim-canvas-container");
+          formtext1.position(670, 270);
           formtext1.style("font-size", "30px");
           formtext1.style("color", "#2B4162");
   
@@ -2036,7 +2180,8 @@ function draw() {
           }
   
           formtext_ = createElement("p", '__');
-          formtext_.position(880, 460);
+          formtext_.parent("sim-canvas-container");
+          formtext_.position(663, 280);
           formtext_.style("font-size", "30px");
           formtext_.style("color", "#2B4162");
   
@@ -2045,7 +2190,8 @@ function draw() {
           }
   
           formtext_s = createElement("p", nf(sJarak, 1, 2));
-          formtext_s.position(860, 495);
+          formtext_s.parent("sim-canvas-container");
+          formtext_s.position(643, 315);
           formtext_s.style("font-size", "30px");
           formtext_s.style("color", "#2B4162");
           
@@ -2054,7 +2200,8 @@ function draw() {
           }
   
           formtext_plus = createElement("p", '+');
-          formtext_plus.position(950, 455);
+          formtext_plus.parent("sim-canvas-container");
+          formtext_plus.position(733, 275);
           formtext_plus.style("font-size", "50px");
           formtext_plus.style("color", "#2B4162");
   
@@ -2063,7 +2210,8 @@ function draw() {
           }
   
           formtext12 = createElement("p", '1');
-          formtext12.position(1007, 450);
+          formtext12.parent("sim-canvas-container");
+          formtext12.position(788, 270);
           formtext12.style("font-size", "30px");
           formtext12.style("color", "#2B4162");
   
@@ -2072,7 +2220,8 @@ function draw() {
           }
   
           formtext_2 = createElement("p", '__');
-          formtext_2.position(1000, 460);
+          formtext_2.parent("sim-canvas-container");
+          formtext_2.position(780, 280);
           formtext_2.style("font-size", "30px");
           formtext_2.style("color", "#2B4162");
   
@@ -2081,7 +2230,8 @@ function draw() {
           }
   
           formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-          formtext_s_aks.position(980, 495);
+          formtext_s_aks.parent("sim-canvas-container");
+          formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
           formtext_s_aks.style("color", "#2B4162");
   
@@ -2090,7 +2240,8 @@ function draw() {
           }
   
           formtext_equal1 = createElement("p", '~');
-          formtext_equal1.position(1060, 450);
+          formtext_equal1.parent("sim-canvas-container");
+          formtext_equal1.position(843, 270);
           formtext_equal1.style("font-size", "50px");
           formtext_equal1.style("color", "#2B4162");
   
@@ -2098,7 +2249,8 @@ function draw() {
             formtext_equal2.remove();
           }
           formtext_equal2 = createElement("p", '~');
-          formtext_equal2.position(1060, 460);
+          formtext_equal2.parent("sim-canvas-container");
+          formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
   
@@ -2107,7 +2259,8 @@ function draw() {
           }
   
           formtext13 = createElement("p", '1');
-          formtext13.position(1117, 450);
+          formtext13.parent("sim-canvas-container");
+          formtext13.position(900, 270);
           formtext13.style("font-size", "30px");
           formtext13.style("color", "#2B4162");
   
@@ -2116,7 +2269,8 @@ function draw() {
           }
   
           formtext_3 = createElement("p", '__');
-          formtext_3.position(1110, 460);
+          formtext_3.parent("sim-canvas-container");
+          formtext_3.position(893, 280);
           formtext_3.style("font-size", "30px");
           formtext_3.style("color", "#2B4162");
   
@@ -2125,7 +2279,8 @@ function draw() {
           }
   
           formtext_f = createElement("p", ((rCCekung / 2) / 2));
-          formtext_f.position(1110, 495);
+          formtext_f.parent("sim-canvas-container");
+          formtext_f.position(893, 315);
           formtext_f.style("font-size", "30px");
           formtext_f.style("color", "#2B4162");
         } else {
@@ -2280,7 +2435,8 @@ function draw() {
       mirrorLayer.drawingContext.setLineDash([]);
       mirrorLayer.strokeWeight(1);
 
-      checkbox.position(220, 150);
+      checkbox.parent("sim-canvas-container");
+      checkbox.position(0, -50);
 
       const formula = checkbox.checked();
   
@@ -2291,9 +2447,10 @@ function draw() {
     
         sJarak = (map(xPensil, 417.5, 0, 33, 241));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+        s.parent("sim-canvas-container");
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
-        s.position(240, 200);
+        s.position(20, 10);
   
         if (s_aks) {
           s_aks.remove();
@@ -2301,9 +2458,10 @@ function draw() {
     
         s_aksJarak = (map(xPensil, 417.5, 0, 33, 241)) * (-1);
         s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
-        s_aks.position(240, 230);
+        s_aks.position(20, 50);
       } else {
         s.hide();
         s_aks.hide();
@@ -2391,7 +2549,8 @@ function draw() {
       xIntersect2 = (b4 - b3)/(m3 - m4);
       yIntersect2 = (m4 * xIntersect2) + b4;
 
-      checkbox.position(220, 150);
+      checkbox.parent("sim-canvas-container");
+      checkbox.position(0, -50);
 
       const formula = checkbox.checked();
   
@@ -2400,28 +2559,31 @@ function draw() {
           s.remove();
         }
     
-        sJarak = (map(xPensil, 417.5, 0, 33, 241));
+        sJarak = (map(xKotak, 417.5, 0, 52, 265));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+        s.parent("sim-canvas-container");
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
-        s.position(240, 200);
+        s.position(20, 10);
   
         if (s_aks) {
           s_aks.remove();
         }
     
-        s_aksJarak = (map(xIntersect2 - 70, 417.5, 0, 33, 241));
+        s_aksJarak = (map(xIntersect2 -25, 417.5, 0, 52, 265));
         s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
-        s_aks.position(240, 230);
+        s_aks.position(20, 50);
 
         if (formtext1) {
           formtext1.remove();
         }
   
         formtext1 = createElement("p", '1');
-        formtext1.position(267, 450);
+        formtext1.parent("sim-canvas-container");
+        formtext1.position(47, 270);
         formtext1.style("font-size", "30px");
         formtext1.style("color", "#2B4162");
 
@@ -2430,7 +2592,8 @@ function draw() {
         }
 
         formtext_ = createElement("p", '__');
-        formtext_.position(260, 460);
+        formtext_.parent("sim-canvas-container");
+        formtext_.position(40, 280);
         formtext_.style("font-size", "30px");
         formtext_.style("color", "#2B4162");
 
@@ -2439,7 +2602,8 @@ function draw() {
         }
 
         formtext_s = createElement("p", nf(sJarak, 1, 2));
-        formtext_s.position(240, 495);
+        formtext_s.parent("sim-canvas-container");
+        formtext_s.position(20, 315);
         formtext_s.style("font-size", "30px");
         formtext_s.style("color", "#2B4162");
         
@@ -2448,7 +2612,8 @@ function draw() {
         }
 
         formtext_plus = createElement("p", '+');
-        formtext_plus.position(330, 455);
+        formtext_plus.parent("sim-canvas-container");
+        formtext_plus.position(110, 275);
         formtext_plus.style("font-size", "50px");
         formtext_plus.style("color", "#2B4162");
 
@@ -2457,7 +2622,8 @@ function draw() {
         }
 
         formtext12 = createElement("p", '1');
-        formtext12.position(387, 450);
+        formtext12.parent("sim-canvas-container");
+        formtext12.position(165, 270);
         formtext12.style("font-size", "30px");
         formtext12.style("color", "#2B4162");
 
@@ -2466,7 +2632,8 @@ function draw() {
         }
 
         formtext_2 = createElement("p", '__');
-        formtext_2.position(380, 460);
+        formtext_2.parent("sim-canvas-container");
+        formtext_2.position(157, 280);
         formtext_2.style("font-size", "30px");
         formtext_2.style("color", "#2B4162");
 
@@ -2475,7 +2642,8 @@ function draw() {
         }
 
         formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-        formtext_s_aks.position(360, 495);
+        formtext_s_aks.parent("sim-canvas-container");
+        formtext_s_aks.position(140, 315);
         formtext_s_aks.style("font-size", "30px");
         formtext_s_aks.style("color", "#2B4162");
 
@@ -2484,7 +2652,8 @@ function draw() {
         }
 
         formtext_equal1 = createElement("p", '~');
-        formtext_equal1.position(440, 450);
+        formtext_equal1.parent("sim-canvas-container");
+        formtext_equal1.position(220, 270);
         formtext_equal1.style("font-size", "50px");
         formtext_equal1.style("color", "#2B4162");
 
@@ -2492,7 +2661,8 @@ function draw() {
           formtext_equal2.remove();
         }
         formtext_equal2 = createElement("p", '~');
-        formtext_equal2.position(440, 460);
+        formtext_equal2.parent("sim-canvas-container");
+        formtext_equal2.position(220, 280);
         formtext_equal2.style("font-size", "50px");
         formtext_equal2.style("color", "#2B4162");
 
@@ -2501,7 +2671,8 @@ function draw() {
         }
 
         formtext13 = createElement("p", '1');
-        formtext13.position(497, 450);
+        formtext13.parent("sim-canvas-container");
+        formtext13.position(277, 270);
         formtext13.style("font-size", "30px");
         formtext13.style("color", "#2B4162");
 
@@ -2510,7 +2681,8 @@ function draw() {
         }
 
         formtext_3 = createElement("p", '__');
-        formtext_3.position(490, 460);
+        formtext_3.parent("sim-canvas-container");
+        formtext_3.position(270, 280);
         formtext_3.style("font-size", "30px");
         formtext_3.style("color", "#2B4162");
 
@@ -2519,7 +2691,8 @@ function draw() {
         }
 
         formtext_f = createElement("p", ((rCCembung / 2) / 2) * (-1));
-        formtext_f.position(480, 495);
+        formtext_f.parent("sim-canvas-container");
+        formtext_f.position(260, 315);
         formtext_f.style("font-size", "30px");
         formtext_f.style("color", "#2B4162");
       } else {
@@ -2675,7 +2848,8 @@ function draw() {
         xIntersect2 = (b4 - b3)/(m3 - m4);
         yIntersect2 = (m4 * xIntersect2) + b4;
 
-        checkbox.position(220, 150);
+        checkbox.parent("sim-canvas-container");
+        checkbox.position(0, -50);
 
         const formula = checkbox.checked();
     
@@ -2684,27 +2858,30 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xPensil, 417.5, 0, 33, 241));
+          sJarak = (map(xKotak, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+          s.parent("sim-canvas-container");
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
-          s.position(240, 200);
+          s.position(20, 10);
           if (s_aks) {
             s_aks.remove();
           }
       
-          s_aksJarak = (map(xIntersect2 - 70, 417.5, 0, 33, 241));
+          s_aksJarak = (map(xIntersect2 - 27, 417.5, 0, 52, 265));
           s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
-          s_aks.position(240, 230);
+          s_aks.position(20, 50);
 
           if (formtext1) {
             formtext1.remove();
           }
     
           formtext1 = createElement("p", '1');
-          formtext1.position(887, 450);
+          formtext1.parent("sim-canvas-container");
+          formtext1.position(670, 270);
           formtext1.style("font-size", "30px");
           formtext1.style("color", "#2B4162");
   
@@ -2713,7 +2890,8 @@ function draw() {
           }
   
           formtext_ = createElement("p", '__');
-          formtext_.position(880, 460);
+          formtext_.parent("sim-canvas-container");
+          formtext_.position(663, 280);
           formtext_.style("font-size", "30px");
           formtext_.style("color", "#2B4162");
   
@@ -2722,7 +2900,8 @@ function draw() {
           }
   
           formtext_s = createElement("p", nf(sJarak, 1, 2));
-          formtext_s.position(860, 495);
+          formtext_s.parent("sim-canvas-container");
+          formtext_s.position(643, 315);
           formtext_s.style("font-size", "30px");
           formtext_s.style("color", "#2B4162");
           
@@ -2731,7 +2910,8 @@ function draw() {
           }
   
           formtext_plus = createElement("p", '+');
-          formtext_plus.position(950, 455);
+          formtext_plus.parent("sim-canvas-container");
+          formtext_plus.position(733, 275);
           formtext_plus.style("font-size", "50px");
           formtext_plus.style("color", "#2B4162");
   
@@ -2740,7 +2920,8 @@ function draw() {
           }
   
           formtext12 = createElement("p", '1');
-          formtext12.position(1007, 450);
+          formtext12.parent("sim-canvas-container");
+          formtext12.position(788, 270);
           formtext12.style("font-size", "30px");
           formtext12.style("color", "#2B4162");
   
@@ -2749,7 +2930,8 @@ function draw() {
           }
   
           formtext_2 = createElement("p", '__');
-          formtext_2.position(1000, 460);
+          formtext_2.parent("sim-canvas-container");
+          formtext_2.position(780, 280);
           formtext_2.style("font-size", "30px");
           formtext_2.style("color", "#2B4162");
   
@@ -2758,7 +2940,8 @@ function draw() {
           }
   
           formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-          formtext_s_aks.position(980, 495);
+          formtext_s_aks.parent("sim-canvas-container");
+          formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
           formtext_s_aks.style("color", "#2B4162");
   
@@ -2767,7 +2950,8 @@ function draw() {
           }
   
           formtext_equal1 = createElement("p", '~');
-          formtext_equal1.position(1060, 450);
+          formtext_equal1.parent("sim-canvas-container");
+          formtext_equal1.position(843, 270);
           formtext_equal1.style("font-size", "50px");
           formtext_equal1.style("color", "#2B4162");
   
@@ -2775,7 +2959,8 @@ function draw() {
             formtext_equal2.remove();
           }
           formtext_equal2 = createElement("p", '~');
-          formtext_equal2.position(1060, 460);
+          formtext_equal2.parent("sim-canvas-container");
+          formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
   
@@ -2784,7 +2969,8 @@ function draw() {
           }
   
           formtext13 = createElement("p", '1');
-          formtext13.position(1117, 450);
+          formtext13.parent("sim-canvas-container");
+          formtext13.position(900, 270);
           formtext13.style("font-size", "30px");
           formtext13.style("color", "#2B4162");
   
@@ -2793,7 +2979,8 @@ function draw() {
           }
   
           formtext_3 = createElement("p", '__');
-          formtext_3.position(1110, 460);
+          formtext_3.parent("sim-canvas-container");
+          formtext_3.position(893, 280);
           formtext_3.style("font-size", "30px");
           formtext_3.style("color", "#2B4162");
   
@@ -2802,7 +2989,8 @@ function draw() {
           }
   
           formtext_f = createElement("p", ((rCCekung / 2) / 2));
-          formtext_f.position(1110, 495);
+          formtext_f.parent("sim-canvas-container");
+          formtext_f.position(893, 315);
           formtext_f.style("font-size", "30px");
           formtext_f.style("color", "#2B4162");
         } else {
@@ -2843,7 +3031,8 @@ function draw() {
         xIntersect2 = (b4 - b3)/(m3 - m4);
         yIntersect2 = (m4 * xIntersect2) + b4;
 
-        checkbox.position(220, 150);
+        checkbox.parent("sim-canvas-container");
+        checkbox.position(0, -50);
 
         const formula = checkbox.checked();
     
@@ -2852,27 +3041,30 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xPensil, 417.5, 0, 33, 241));
+          sJarak = (map(xKotak, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+          s.parent("sim-canvas-container");
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
-          s.position(240, 200);
+          s.position(20, 10);
           if (s_aks) {
             s_aks.remove();
           }
       
-          s_aksJarak = (map(xIntersect2 - 70, 417.5, 0, 33, 241));
+          s_aksJarak = (map(xIntersect2 - 27, 417.5, 0, 52, 265));
           s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
-          s_aks.position(240, 230);
+          s_aks.position(20, 50);
 
           if (formtext1) {
             formtext1.remove();
           }
     
           formtext1 = createElement("p", '1');
-          formtext1.position(887, 450);
+          formtext1.parent("sim-canvas-container");
+          formtext1.position(670, 270);
           formtext1.style("font-size", "30px");
           formtext1.style("color", "#2B4162");
   
@@ -2881,7 +3073,8 @@ function draw() {
           }
   
           formtext_ = createElement("p", '__');
-          formtext_.position(880, 460);
+          formtext_.parent("sim-canvas-container");
+          formtext_.position(663, 280);
           formtext_.style("font-size", "30px");
           formtext_.style("color", "#2B4162");
   
@@ -2890,7 +3083,8 @@ function draw() {
           }
   
           formtext_s = createElement("p", nf(sJarak, 1, 2));
-          formtext_s.position(860, 495);
+          formtext_s.parent("sim-canvas-container");
+          formtext_s.position(643, 315);
           formtext_s.style("font-size", "30px");
           formtext_s.style("color", "#2B4162");
           
@@ -2899,7 +3093,8 @@ function draw() {
           }
   
           formtext_plus = createElement("p", '+');
-          formtext_plus.position(950, 455);
+          formtext_plus.parent("sim-canvas-container");
+          formtext_plus.position(733, 275);
           formtext_plus.style("font-size", "50px");
           formtext_plus.style("color", "#2B4162");
   
@@ -2908,7 +3103,8 @@ function draw() {
           }
   
           formtext12 = createElement("p", '1');
-          formtext12.position(1007, 450);
+          formtext12.parent("sim-canvas-container");
+          formtext12.position(788, 270);
           formtext12.style("font-size", "30px");
           formtext12.style("color", "#2B4162");
   
@@ -2917,7 +3113,8 @@ function draw() {
           }
   
           formtext_2 = createElement("p", '__');
-          formtext_2.position(1000, 460);
+          formtext_2.parent("sim-canvas-container");
+          formtext_2.position(780, 280);
           formtext_2.style("font-size", "30px");
           formtext_2.style("color", "#2B4162");
   
@@ -2926,7 +3123,8 @@ function draw() {
           }
   
           formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-          formtext_s_aks.position(980, 495);
+          formtext_s_aks.parent("sim-canvas-container");
+          formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
           formtext_s_aks.style("color", "#2B4162");
   
@@ -2935,7 +3133,8 @@ function draw() {
           }
   
           formtext_equal1 = createElement("p", '~');
-          formtext_equal1.position(1060, 450);
+          formtext_equal1.parent("sim-canvas-container");
+          formtext_equal1.position(843, 270);
           formtext_equal1.style("font-size", "50px");
           formtext_equal1.style("color", "#2B4162");
   
@@ -2943,7 +3142,8 @@ function draw() {
             formtext_equal2.remove();
           }
           formtext_equal2 = createElement("p", '~');
-          formtext_equal2.position(1060, 460);
+          formtext_equal2.parent("sim-canvas-container");
+          formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
   
@@ -2952,7 +3152,8 @@ function draw() {
           }
   
           formtext13 = createElement("p", '1');
-          formtext13.position(1117, 450);
+          formtext13.parent("sim-canvas-container");
+          formtext13.position(900, 270);
           formtext13.style("font-size", "30px");
           formtext13.style("color", "#2B4162");
   
@@ -2961,7 +3162,8 @@ function draw() {
           }
   
           formtext_3 = createElement("p", '__');
-          formtext_3.position(1110, 460);
+          formtext_3.parent("sim-canvas-container");
+          formtext_3.position(893, 280);
           formtext_3.style("font-size", "30px");
           formtext_3.style("color", "#2B4162");
   
@@ -2970,7 +3172,8 @@ function draw() {
           }
   
           formtext_f = createElement("p", ((rCCekung / 2) / 2));
-          formtext_f.position(1110, 495);
+          formtext_f.parent("sim-canvas-container");
+          formtext_f.position(893, 315);
           formtext_f.style("font-size", "30px");
           formtext_f.style("color", "#2B4162");
         } else {
@@ -3124,7 +3327,8 @@ function draw() {
       mirrorLayer.drawingContext.setLineDash([]);
       mirrorLayer.strokeWeight(1);
 
-      checkbox.position(220, 150);
+      checkbox.parent("sim-canvas-container");
+      checkbox.position(0, -50);
 
       const formula = checkbox.checked();
   
@@ -3135,9 +3339,10 @@ function draw() {
     
         sJarak = (map(xApel, 417.5, 0, 35, 244));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+        s.parent("sim-canvas-container");
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
-        s.position(240, 200);
+        s.position(20, 10);
   
         if (s_aks) {
           s_aks.remove();
@@ -3145,9 +3350,10 @@ function draw() {
     
         s_aksJarak = (map(xApel, 417.5, 0, 35, 244)) * (-1);
         s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
-        s_aks.position(240, 230);
+        s_aks.position(20, 50);
       } else {
         s.hide();
         s_aks.hide();
@@ -3235,7 +3441,8 @@ function draw() {
       xIntersect2 = (b4 - b3)/(m3 - m4);
       yIntersect2 = (m4 * xIntersect2) + b4;
 
-      checkbox.position(220, 150);
+      checkbox.parent("sim-canvas-container");
+      checkbox.position(0, -50);
 
       const formula = checkbox.checked();
   
@@ -3244,28 +3451,31 @@ function draw() {
           s.remove();
         }
     
-        sJarak = (map(xApel, 417.5, 0, 35, 244));
+        sJarak = (map(xKotak, 417.5, 0, 52, 265));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+        s.parent("sim-canvas-container");
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
-        s.position(240, 200);
+        s.position(20, 10);
   
         if (s_aks) {
           s_aks.remove();
         }
     
-        s_aksJarak = (map(xIntersect2 - 20, 417.5, 0, 35, 244));
+        s_aksJarak = (map(xIntersect2 -25, 417.5, 0, 52, 265));
         s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
-        s_aks.position(240, 230);
+        s_aks.position(20, 50);
 
         if (formtext1) {
           formtext1.remove();
         }
   
         formtext1 = createElement("p", '1');
-        formtext1.position(267, 450);
+        formtext1.parent("sim-canvas-container");
+        formtext1.position(47, 270);
         formtext1.style("font-size", "30px");
         formtext1.style("color", "#2B4162");
 
@@ -3274,7 +3484,8 @@ function draw() {
         }
 
         formtext_ = createElement("p", '__');
-        formtext_.position(260, 460);
+        formtext_.parent("sim-canvas-container");
+        formtext_.position(40, 280);
         formtext_.style("font-size", "30px");
         formtext_.style("color", "#2B4162");
 
@@ -3283,7 +3494,8 @@ function draw() {
         }
 
         formtext_s = createElement("p", nf(sJarak, 1, 2));
-        formtext_s.position(240, 495);
+        formtext_s.parent("sim-canvas-container");
+        formtext_s.position(20, 315);
         formtext_s.style("font-size", "30px");
         formtext_s.style("color", "#2B4162");
         
@@ -3292,7 +3504,8 @@ function draw() {
         }
 
         formtext_plus = createElement("p", '+');
-        formtext_plus.position(330, 455);
+        formtext_plus.parent("sim-canvas-container");
+        formtext_plus.position(110, 275);
         formtext_plus.style("font-size", "50px");
         formtext_plus.style("color", "#2B4162");
 
@@ -3301,7 +3514,8 @@ function draw() {
         }
 
         formtext12 = createElement("p", '1');
-        formtext12.position(387, 450);
+        formtext12.parent("sim-canvas-container");
+        formtext12.position(165, 270);
         formtext12.style("font-size", "30px");
         formtext12.style("color", "#2B4162");
 
@@ -3310,7 +3524,8 @@ function draw() {
         }
 
         formtext_2 = createElement("p", '__');
-        formtext_2.position(380, 460);
+        formtext_2.parent("sim-canvas-container");
+        formtext_2.position(157, 280);
         formtext_2.style("font-size", "30px");
         formtext_2.style("color", "#2B4162");
 
@@ -3319,7 +3534,8 @@ function draw() {
         }
 
         formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-        formtext_s_aks.position(360, 495);
+        formtext_s_aks.parent("sim-canvas-container");
+        formtext_s_aks.position(140, 315);
         formtext_s_aks.style("font-size", "30px");
         formtext_s_aks.style("color", "#2B4162");
 
@@ -3328,7 +3544,8 @@ function draw() {
         }
 
         formtext_equal1 = createElement("p", '~');
-        formtext_equal1.position(440, 450);
+        formtext_equal1.parent("sim-canvas-container");
+        formtext_equal1.position(220, 270);
         formtext_equal1.style("font-size", "50px");
         formtext_equal1.style("color", "#2B4162");
 
@@ -3336,7 +3553,8 @@ function draw() {
           formtext_equal2.remove();
         }
         formtext_equal2 = createElement("p", '~');
-        formtext_equal2.position(440, 460);
+        formtext_equal2.parent("sim-canvas-container");
+        formtext_equal2.position(220, 280);
         formtext_equal2.style("font-size", "50px");
         formtext_equal2.style("color", "#2B4162");
 
@@ -3345,7 +3563,8 @@ function draw() {
         }
 
         formtext13 = createElement("p", '1');
-        formtext13.position(497, 450);
+        formtext13.parent("sim-canvas-container");
+        formtext13.position(277, 270);
         formtext13.style("font-size", "30px");
         formtext13.style("color", "#2B4162");
 
@@ -3354,7 +3573,8 @@ function draw() {
         }
 
         formtext_3 = createElement("p", '__');
-        formtext_3.position(490, 460);
+        formtext_3.parent("sim-canvas-container");
+        formtext_3.position(270, 280);
         formtext_3.style("font-size", "30px");
         formtext_3.style("color", "#2B4162");
 
@@ -3363,7 +3583,8 @@ function draw() {
         }
 
         formtext_f = createElement("p", ((rCCembung / 2) / 2) * (-1));
-        formtext_f.position(480, 495);
+        formtext_f.parent("sim-canvas-container");
+        formtext_f.position(260, 315);
         formtext_f.style("font-size", "30px");
         formtext_f.style("color", "#2B4162");
       } else {
@@ -3519,7 +3740,8 @@ function draw() {
         xIntersect2 = (b4 - b3)/(m3 - m4);
         yIntersect2 = (m4 * xIntersect2) + b4;
 
-        checkbox.position(220, 150);
+        checkbox.parent("sim-canvas-container");
+        checkbox.position(0, -50);
 
         const formula = checkbox.checked();
     
@@ -3528,27 +3750,30 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xApel, 417.5, 0, 35, 244));
+          sJarak = (map(xKotak, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+          s.parent("sim-canvas-container");
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
-          s.position(240, 200);
+          s.position(20, 10);
           if (s_aks) {
             s_aks.remove();
           }
       
-          s_aksJarak = (map(xIntersect2 - 70, 417.5, 0, 35, 244));
+          s_aksJarak = (map(xIntersect2 - 27, 417.5, 0, 52, 265));
           s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
-          s_aks.position(240, 230);
+          s_aks.position(20, 50);
 
           if (formtext1) {
             formtext1.remove();
           }
     
           formtext1 = createElement("p", '1');
-          formtext1.position(887, 450);
+          formtext1.parent("sim-canvas-container");
+          formtext1.position(670, 270);
           formtext1.style("font-size", "30px");
           formtext1.style("color", "#2B4162");
   
@@ -3557,7 +3782,8 @@ function draw() {
           }
   
           formtext_ = createElement("p", '__');
-          formtext_.position(880, 460);
+          formtext_.parent("sim-canvas-container");
+          formtext_.position(663, 280);
           formtext_.style("font-size", "30px");
           formtext_.style("color", "#2B4162");
   
@@ -3566,7 +3792,8 @@ function draw() {
           }
   
           formtext_s = createElement("p", nf(sJarak, 1, 2));
-          formtext_s.position(860, 495);
+          formtext_s.parent("sim-canvas-container");
+          formtext_s.position(643, 315);
           formtext_s.style("font-size", "30px");
           formtext_s.style("color", "#2B4162");
           
@@ -3575,7 +3802,8 @@ function draw() {
           }
   
           formtext_plus = createElement("p", '+');
-          formtext_plus.position(950, 455);
+          formtext_plus.parent("sim-canvas-container");
+          formtext_plus.position(733, 275);
           formtext_plus.style("font-size", "50px");
           formtext_plus.style("color", "#2B4162");
   
@@ -3584,7 +3812,8 @@ function draw() {
           }
   
           formtext12 = createElement("p", '1');
-          formtext12.position(1007, 450);
+          formtext12.parent("sim-canvas-container");
+          formtext12.position(788, 270);
           formtext12.style("font-size", "30px");
           formtext12.style("color", "#2B4162");
   
@@ -3593,7 +3822,8 @@ function draw() {
           }
   
           formtext_2 = createElement("p", '__');
-          formtext_2.position(1000, 460);
+          formtext_2.parent("sim-canvas-container");
+          formtext_2.position(780, 280);
           formtext_2.style("font-size", "30px");
           formtext_2.style("color", "#2B4162");
   
@@ -3602,7 +3832,8 @@ function draw() {
           }
   
           formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-          formtext_s_aks.position(980, 495);
+          formtext_s_aks.parent("sim-canvas-container");
+          formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
           formtext_s_aks.style("color", "#2B4162");
   
@@ -3611,7 +3842,8 @@ function draw() {
           }
   
           formtext_equal1 = createElement("p", '~');
-          formtext_equal1.position(1060, 450);
+          formtext_equal1.parent("sim-canvas-container");
+          formtext_equal1.position(843, 270);
           formtext_equal1.style("font-size", "50px");
           formtext_equal1.style("color", "#2B4162");
   
@@ -3619,7 +3851,8 @@ function draw() {
             formtext_equal2.remove();
           }
           formtext_equal2 = createElement("p", '~');
-          formtext_equal2.position(1060, 460);
+          formtext_equal2.parent("sim-canvas-container");
+          formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
   
@@ -3628,7 +3861,8 @@ function draw() {
           }
   
           formtext13 = createElement("p", '1');
-          formtext13.position(1117, 450);
+          formtext13.parent("sim-canvas-container");
+          formtext13.position(900, 270);
           formtext13.style("font-size", "30px");
           formtext13.style("color", "#2B4162");
   
@@ -3637,7 +3871,8 @@ function draw() {
           }
   
           formtext_3 = createElement("p", '__');
-          formtext_3.position(1110, 460);
+          formtext_3.parent("sim-canvas-container");
+          formtext_3.position(893, 280);
           formtext_3.style("font-size", "30px");
           formtext_3.style("color", "#2B4162");
   
@@ -3646,7 +3881,8 @@ function draw() {
           }
   
           formtext_f = createElement("p", ((rCCekung / 2) / 2));
-          formtext_f.position(1110, 495);
+          formtext_f.parent("sim-canvas-container");
+          formtext_f.position(893, 315);
           formtext_f.style("font-size", "30px");
           formtext_f.style("color", "#2B4162");
         } else {
@@ -3687,7 +3923,8 @@ function draw() {
         xIntersect2 = (b4 - b3)/(m3 - m4);
         yIntersect2 = (m4 * xIntersect2) + b4;
 
-        checkbox.position(220, 150);
+        checkbox.parent("sim-canvas-container");
+        checkbox.position(0, -50);
 
         const formula = checkbox.checked();
     
@@ -3696,27 +3933,30 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xApel, 417.5, 0, 35, 244));
+          sJarak = (map(xKotak, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
+          s.parent("sim-canvas-container");
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
-          s.position(240, 200);
+          s.position(20, 10);
           if (s_aks) {
             s_aks.remove();
           }
       
-          s_aksJarak = (map(xIntersect2 - 120, 417.5, 0, 35, 244));
+          s_aksJarak = (map(xIntersect2 - 27, 417.5, 0, 52, 265));
           s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
-          s_aks.position(240, 230);                    
+          s_aks.position(20, 50);
 
           if (formtext1) {
             formtext1.remove();
           }
     
           formtext1 = createElement("p", '1');
-          formtext1.position(887, 450);
+          formtext1.parent("sim-canvas-container");
+          formtext1.position(670, 270);
           formtext1.style("font-size", "30px");
           formtext1.style("color", "#2B4162");
   
@@ -3725,7 +3965,8 @@ function draw() {
           }
   
           formtext_ = createElement("p", '__');
-          formtext_.position(880, 460);
+          formtext_.parent("sim-canvas-container");
+          formtext_.position(663, 280);
           formtext_.style("font-size", "30px");
           formtext_.style("color", "#2B4162");
   
@@ -3734,7 +3975,8 @@ function draw() {
           }
   
           formtext_s = createElement("p", nf(sJarak, 1, 2));
-          formtext_s.position(860, 495);
+          formtext_s.parent("sim-canvas-container");
+          formtext_s.position(643, 315);
           formtext_s.style("font-size", "30px");
           formtext_s.style("color", "#2B4162");
           
@@ -3743,7 +3985,8 @@ function draw() {
           }
   
           formtext_plus = createElement("p", '+');
-          formtext_plus.position(950, 455);
+          formtext_plus.parent("sim-canvas-container");
+          formtext_plus.position(733, 275);
           formtext_plus.style("font-size", "50px");
           formtext_plus.style("color", "#2B4162");
   
@@ -3752,7 +3995,8 @@ function draw() {
           }
   
           formtext12 = createElement("p", '1');
-          formtext12.position(1007, 450);
+          formtext12.parent("sim-canvas-container");
+          formtext12.position(788, 270);
           formtext12.style("font-size", "30px");
           formtext12.style("color", "#2B4162");
   
@@ -3761,7 +4005,8 @@ function draw() {
           }
   
           formtext_2 = createElement("p", '__');
-          formtext_2.position(1000, 460);
+          formtext_2.parent("sim-canvas-container");
+          formtext_2.position(780, 280);
           formtext_2.style("font-size", "30px");
           formtext_2.style("color", "#2B4162");
   
@@ -3770,7 +4015,8 @@ function draw() {
           }
   
           formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
-          formtext_s_aks.position(980, 495);
+          formtext_s_aks.parent("sim-canvas-container");
+          formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
           formtext_s_aks.style("color", "#2B4162");
   
@@ -3779,7 +4025,8 @@ function draw() {
           }
   
           formtext_equal1 = createElement("p", '~');
-          formtext_equal1.position(1060, 450);
+          formtext_equal1.parent("sim-canvas-container");
+          formtext_equal1.position(843, 270);
           formtext_equal1.style("font-size", "50px");
           formtext_equal1.style("color", "#2B4162");
   
@@ -3787,7 +4034,8 @@ function draw() {
             formtext_equal2.remove();
           }
           formtext_equal2 = createElement("p", '~');
-          formtext_equal2.position(1060, 460);
+          formtext_equal2.parent("sim-canvas-container");
+          formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
   
@@ -3796,7 +4044,8 @@ function draw() {
           }
   
           formtext13 = createElement("p", '1');
-          formtext13.position(1117, 450);
+          formtext13.parent("sim-canvas-container");
+          formtext13.position(900, 270);
           formtext13.style("font-size", "30px");
           formtext13.style("color", "#2B4162");
   
@@ -3805,7 +4054,8 @@ function draw() {
           }
   
           formtext_3 = createElement("p", '__');
-          formtext_3.position(1110, 460);
+          formtext_3.parent("sim-canvas-container");
+          formtext_3.position(893, 280);
           formtext_3.style("font-size", "30px");
           formtext_3.style("color", "#2B4162");
   
@@ -3814,7 +4064,8 @@ function draw() {
           }
   
           formtext_f = createElement("p", ((rCCekung / 2) / 2));
-          formtext_f.position(1110, 495);
+          formtext_f.parent("sim-canvas-container");
+          formtext_f.position(893, 315);
           formtext_f.style("font-size", "30px");
           formtext_f.style("color", "#2B4162");
         } else {
@@ -3862,35 +4113,50 @@ function draw() {
     formtext_equal1.remove();
     formtext_equal2.remove();
     s = createElement("p", 's');
-    s.position(-100, -100);
+    s.parent("sim-canvas-container");
+    s.position(-2000, -2000);
     s_aks = createElement("p", 's`');
-    s_aks.position(-100, -100);
+    s_aks.parent("sim-canvas-container");
+    s_aks.position(-2000, -2000);
     checkbox = createCheckbox('Formula', false);
-    checkbox.position(-100, -100);
+    checkbox.parent("sim-canvas-container");
+    checkbox.position(-2000, -2000);
     formtext1 = createElement("p", 'f');
-    formtext1.position(-100, -100);
+    formtext1.parent("sim-canvas-container");
+    formtext1.position(-2000, -2000);
     formtext_ = createElement("p", 'f');
-    formtext_.position(-100, -100);
+    formtext_.parent("sim-canvas-container");
+    formtext_.position(-2000, -2000);
     formtext12 = createElement("p", 'f');
-    formtext12.position(-100, -100);
+    formtext12.parent("sim-canvas-container");
+    formtext12.position(-2000, -2000);
     formtext_2 = createElement("p", 'f');
-    formtext_2.position(-100, -100);
+    formtext_2.parent("sim-canvas-container");
+    formtext_2.position(-2000, -2000);
     formtext13 = createElement("p", 'f');
-    formtext13.position(-100, -100);
+    formtext13.parent("sim-canvas-container");
+    formtext13.position(-2000, -2000);
     formtext_3 = createElement("p", 'f');
-    formtext_3.position(-100, -100);
+    formtext_3.parent("sim-canvas-container");
+    formtext_3.position(-2000, -2000);
     formtext_s = createElement("p", 'f');
-    formtext_s.position(-100, -100);
+    formtext_s.parent("sim-canvas-container");
+    formtext_s.position(-2000, -2000);
     formtext_s_aks = createElement("p", 'f');
-    formtext_s_aks.position(-100, -100);
+    formtext_s_aks.parent("sim-canvas-container");
+    formtext_s_aks.position(-2000, -2000);
     formtext_f = createElement("p", 'f');
-    formtext_f.position(-100, -100);
+    formtext_f.parent("sim-canvas-container");
+    formtext_f.position(-2000, -2000);
     formtext_plus = createElement("p", 'f');
-    formtext_plus.position(-100, -100);
+    formtext_plus.parent("sim-canvas-container");
+    formtext_plus.position(-2000, -2000);
     formtext_equal1 = createElement("p", 'f');
-    formtext_equal1.position(-100, -100);
+    formtext_equal1.parent("sim-canvas-container");
+    formtext_equal1.position(-2000, -2000);
     formtext_equal2 = createElement("p", 'f');
-    formtext_equal2.position(-100, -100);
+    formtext_equal2.parent("sim-canvas-container");
+    formtext_equal2.position(-2000, -2000);
   }
 }
 
