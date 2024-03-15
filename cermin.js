@@ -1666,7 +1666,7 @@ function draw() {
           s.remove();
         }
     
-        sJarak = (map(xKotak, 417.5, 0, 52, 265));
+        sJarak = (map(xSegitiga, 417.5, 0, 52, 265));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
         s.parent("sim-canvas-container");
         s.style("font-size", "30px");
@@ -1965,7 +1965,7 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xKotak, 417.5, 0, 52, 265));
+          sJarak = (map(xSegitiga, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
           s.parent("sim-canvas-container");
           s.style("font-size", "30px");
@@ -2148,7 +2148,7 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xKotak, 417.5, 0, 52, 265));
+          sJarak = (map(xSegitiga, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
           s.parent("sim-canvas-container");
           s.style("font-size", "30px");
@@ -2559,7 +2559,7 @@ function draw() {
           s.remove();
         }
     
-        sJarak = (map(xKotak, 417.5, 0, 52, 265));
+        sJarak = (map(xPensil, 417.5, 0, 52, 265));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
         s.parent("sim-canvas-container");
         s.style("font-size", "30px");
@@ -2858,7 +2858,7 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xKotak, 417.5, 0, 52, 265));
+          sJarak = (map(xPensil, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
           s.parent("sim-canvas-container");
           s.style("font-size", "30px");
@@ -3041,7 +3041,7 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xKotak, 417.5, 0, 52, 265));
+          sJarak = (map(xPensil, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
           s.parent("sim-canvas-container");
           s.style("font-size", "30px");
@@ -3451,7 +3451,7 @@ function draw() {
           s.remove();
         }
     
-        sJarak = (map(xKotak, 417.5, 0, 52, 265));
+        sJarak = (map(xApel, 417.5, 0, 52, 265));
         s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
         s.parent("sim-canvas-container");
         s.style("font-size", "30px");
@@ -3750,7 +3750,7 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xKotak, 417.5, 0, 52, 265));
+          sJarak = (map(xApel, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
           s.parent("sim-canvas-container");
           s.style("font-size", "30px");
@@ -3933,7 +3933,7 @@ function draw() {
             s.remove();
           }
       
-          sJarak = (map(xKotak, 417.5, 0, 52, 265));
+          sJarak = (map(xApel, 417.5, 0, 52, 265));
           s = createElement("p", 's &nbsp;' + nf(sJarak, 1, 2) + ' cm');
           s.parent("sim-canvas-container");
           s.style("font-size", "30px");
