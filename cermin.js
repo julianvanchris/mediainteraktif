@@ -40,7 +40,7 @@ var yCDatar, yCCembung, yCCekung;
 var rCCembung, rCCekung;
 var fCCembung, fCCekung;
 var jarak;
-var sJarak, s_aksJarak;
+var sJarak, s_aksJarak, s_aksAn;
 var x1, x2, x3, x4, x5, x6, x7, x8;
 var y1, y2, y3, y4, y5, y6, y7, y8;
 var m1, m2, m3, m4;
@@ -778,13 +778,15 @@ function draw() {
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
         s.position(20, 10);
+
+        s_aksAn = (sJarak * (((rCCembung / 2) / 2)) * (-1)) / (sJarak - (((rCCembung / 2) / 2)) * (-1))
   
         if (s_aks) {
           s_aks.remove();
         }
     
         s_aksJarak = (map(xIntersect2 -25, 417.5, 0, 52, 265));
-        s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
         s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
@@ -854,7 +856,7 @@ function draw() {
           formtext_s_aks.remove();
         }
 
-        formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+        formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
         formtext_s_aks.parent("sim-canvas-container");
         formtext_s_aks.position(140, 315);
         formtext_s_aks.style("font-size", "30px");
@@ -1078,12 +1080,15 @@ function draw() {
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
           s.position(20, 10);
+
+          s_aksAn = (sJarak * (((rCCekung / 2) / 2))) / (sJarak - (((rCCekung / 2) / 2)))
+
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 - 27, 417.5, 0, 52, 265));
-          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
           s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
@@ -1153,7 +1158,7 @@ function draw() {
             formtext_s_aks.remove();
           }
   
-          formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+          formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
           formtext_s_aks.parent("sim-canvas-container");
           formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
@@ -1262,12 +1267,15 @@ function draw() {
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
           s.position(20, 10);
+
+          s_aksAn = (sJarak * (((rCCekung / 2) / 2))) / (sJarak - (((rCCekung / 2) / 2)))
+
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 + 10, 417.5, 0, 52, 265));
-          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
           s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
@@ -1337,7 +1345,7 @@ function draw() {
             formtext_s_aks.remove();
           }
   
-          formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+          formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
           formtext_s_aks.parent("sim-canvas-container");
           formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
@@ -1672,13 +1680,15 @@ function draw() {
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
         s.position(20, 10);
+
+        s_aksAn = (sJarak * (((rCCembung / 2) / 2)) * (-1)) / (sJarak - (((rCCembung / 2) / 2)) * (-1))
   
         if (s_aks) {
           s_aks.remove();
         }
     
         s_aksJarak = (map(xIntersect2 - 25, 417.5, 0, 40, 250));
-        s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
         s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
@@ -1748,7 +1758,7 @@ function draw() {
           formtext_s_aks.remove();
         }
 
-        formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+        formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
         formtext_s_aks.parent("sim-canvas-container");
         formtext_s_aks.position(140, 315);
         formtext_s_aks.style("font-size", "30px");
@@ -1971,12 +1981,15 @@ function draw() {
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
           s.position(20, 10);
+
+          s_aksAn = (sJarak * (((rCCekung / 2) / 2))) / (sJarak - (((rCCekung / 2) / 2)))
+
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 - 45, 417.5, 0, 40, 250));
-          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
           s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
@@ -2046,7 +2059,7 @@ function draw() {
             formtext_s_aks.remove();
           }
   
-          formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+          formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
           formtext_s_aks.parent("sim-canvas-container");
           formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
@@ -2154,12 +2167,15 @@ function draw() {
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
           s.position(20, 10);
+
+          s_aksAn = (sJarak * (((rCCekung / 2) / 2))) / (sJarak - (((rCCekung / 2) / 2)))
+
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 - 90, 417.5, 0, 40, 250));
-          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
           s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
@@ -2229,7 +2245,7 @@ function draw() {
             formtext_s_aks.remove();
           }
   
-          formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+          formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
           formtext_s_aks.parent("sim-canvas-container");
           formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
@@ -2565,13 +2581,15 @@ function draw() {
         s.style("font-size", "30px");
         s.style("color", "#2B4162");
         s.position(20, 10);
+
+        s_aksAn = (sJarak * (((rCCembung / 2) / 2)) * (-1)) / (sJarak - (((rCCembung / 2) / 2)) * (-1))
   
         if (s_aks) {
           s_aks.remove();
         }
     
         s_aksJarak = (map(xIntersect2 - 70, 417.5, 0, 33, 241));
-        s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
         s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
@@ -2641,7 +2659,7 @@ function draw() {
           formtext_s_aks.remove();
         }
 
-        formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+        formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
         formtext_s_aks.parent("sim-canvas-container");
         formtext_s_aks.position(140, 315);
         formtext_s_aks.style("font-size", "30px");
@@ -2864,12 +2882,15 @@ function draw() {
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
           s.position(20, 10);
+
+          s_aksAn = (sJarak * (((rCCekung / 2) / 2))) / (sJarak - (((rCCekung / 2) / 2)))
+
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 - 70, 417.5, 0, 33, 241));
-          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
           s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
@@ -2939,7 +2960,7 @@ function draw() {
             formtext_s_aks.remove();
           }
   
-          formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+          formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
           formtext_s_aks.parent("sim-canvas-container");
           formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
@@ -3047,12 +3068,15 @@ function draw() {
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
           s.position(20, 10);
+
+          s_aksAn = (sJarak * (((rCCekung / 2) / 2))) / (sJarak - (((rCCekung / 2) / 2)))
+
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 - 70, 417.5, 0, 33, 241));
-          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
           s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
@@ -3122,7 +3146,7 @@ function draw() {
             formtext_s_aks.remove();
           }
   
-          formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+          formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
           formtext_s_aks.parent("sim-canvas-container");
           formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
@@ -3458,12 +3482,14 @@ function draw() {
         s.style("color", "#2B4162");
         s.position(20, 10);
   
+        s_aksAn = (sJarak * (((rCCembung / 2) / 2)) * (-1)) / (sJarak - (((rCCembung / 2) / 2)) * (-1))
+
         if (s_aks) {
           s_aks.remove();
         }
     
         s_aksJarak = (map(xIntersect2 - 20, 417.5, 0, 35, 244));
-        s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+        s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
         s_aks.parent("sim-canvas-container");
         s_aks.style("font-size", "30px");
         s_aks.style("color", "#2B4162");
@@ -3533,7 +3559,7 @@ function draw() {
           formtext_s_aks.remove();
         }
 
-        formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+        formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
         formtext_s_aks.parent("sim-canvas-container");
         formtext_s_aks.position(140, 315);
         formtext_s_aks.style("font-size", "30px");
@@ -3756,12 +3782,15 @@ function draw() {
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
           s.position(20, 10);
+
+          s_aksAn = (sJarak * (((rCCekung / 2) / 2))) / (sJarak - (((rCCekung / 2) / 2)))
+
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 - 70, 417.5, 0, 35, 244));
-          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
           s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
@@ -3831,7 +3860,7 @@ function draw() {
             formtext_s_aks.remove();
           }
   
-          formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+          formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
           formtext_s_aks.parent("sim-canvas-container");
           formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
@@ -3939,12 +3968,15 @@ function draw() {
           s.style("font-size", "30px");
           s.style("color", "#2B4162");
           s.position(20, 10);
+
+          s_aksAn = (sJarak * (((rCCekung / 2) / 2))) / (sJarak - (((rCCekung / 2) / 2)))
+
           if (s_aks) {
             s_aks.remove();
           }
       
           s_aksJarak = (map(xIntersect2 - 120, 417.5, 0, 35, 244));
-          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksJarak, 1, 2) + ' cm');
+          s_aks = createElement("p", 's` &nbsp;' + nf(s_aksAn, 1, 2) + ' cm');
           s_aks.parent("sim-canvas-container");
           s_aks.style("font-size", "30px");
           s_aks.style("color", "#2B4162");
@@ -4014,7 +4046,7 @@ function draw() {
             formtext_s_aks.remove();
           }
   
-          formtext_s_aks = createElement("p", nf(s_aksJarak, 1, 2));
+          formtext_s_aks = createElement("p", nf(s_aksAn, 1, 2));
           formtext_s_aks.parent("sim-canvas-container");
           formtext_s_aks.position(763, 315);
           formtext_s_aks.style("font-size", "30px");
