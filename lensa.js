@@ -1305,7 +1305,7 @@ function draw() {
         s.style("color", "#2B4162");
         s.position(733, 275);
 
-        s_aksAn = (sJarak * (((rCCembung / 2) / 2)) * (-1)) / (sJarak - (((rCCembung / 2) / 2)) * (-1))
+        s_aksAn = (sJarak * (((rCCekung / 2) / 2)) * (-1)) / (sJarak - (((rCCekung / 2) / 2)) * (-1))
   
         if (s_aks) {
           s_aks.remove();
@@ -1431,7 +1431,7 @@ function draw() {
           formtext_f.remove();
         }
 
-        formtext_f = createElement("p", ((rCCembung / 2) / 2) * (-1));
+        formtext_f = createElement("p", ((rCCekung / 2) / 2) * (-1));
         formtext_f.parent("sim-canvas-container");
         formtext_f.position(260, 315);
         formtext_f.style("font-size", "30px");
@@ -2142,7 +2142,7 @@ function draw() {
         s.style("color", "#2B4162");
         s.position(733, 275);
 
-        s_aksAn = (sJarak * (((rCCembung / 2) / 2)) * (-1)) / (sJarak - (((rCCembung / 2) / 2)) * (-1))
+        s_aksAn = (sJarak * (((rCCekung / 2) / 2)) * (-1)) / (sJarak - (((rCCekung / 2) / 2)) * (-1))
   
         if (s_aks) {
           s_aks.remove();
@@ -2268,7 +2268,7 @@ function draw() {
           formtext_f.remove();
         }
 
-        formtext_f = createElement("p", ((rCCembung / 2) / 2) * (-1));
+        formtext_f = createElement("p", ((rCCekung / 2) / 2) * (-1));
         formtext_f.parent("sim-canvas-container");
         formtext_f.position(260, 315);
         formtext_f.style("font-size", "30px");
@@ -2959,7 +2959,7 @@ function draw() {
         s.style("color", "#2B4162");
         s.position(733, 275);
 
-        s_aksAn = (sJarak * (((rCCembung / 2) / 2)) * (-1)) / (sJarak - (((rCCembung / 2) / 2)) * (-1))
+        s_aksAn = (sJarak * (((rCCekung / 2) / 2)) * (-1)) / (sJarak - (((rCCekung / 2) / 2)) * (-1))
   
         if (s_aks) {
           s_aks.remove();
@@ -3085,7 +3085,7 @@ function draw() {
           formtext_f.remove();
         }
 
-        formtext_f = createElement("p", ((rCCembung / 2) / 2) * (-1));
+        formtext_f = createElement("p", ((rCCekung / 2) / 2) * (-1));
         formtext_f.parent("sim-canvas-container");
         formtext_f.position(260, 315);
         formtext_f.style("font-size", "30px");
@@ -3795,7 +3795,7 @@ function draw() {
         s.style("color", "#2B4162");
         s.position(733, 275);
 
-        s_aksAn = (sJarak * (((rCCembung / 2) / 2)) * (-1)) / (sJarak - (((rCCembung / 2) / 2)) * (-1))
+        s_aksAn = (sJarak * (((rCCekung / 2) / 2)) * (-1)) / (sJarak - (((rCCekung / 2) / 2)) * (-1))
   
         if (s_aks) {
           s_aks.remove();
@@ -3921,7 +3921,7 @@ function draw() {
           formtext_f.remove();
         }
 
-        formtext_f = createElement("p", ((rCCembung / 2) / 2) * (-1));
+        formtext_f = createElement("p", ((rCCekung / 2) / 2) * (-1));
         formtext_f.parent("sim-canvas-container");
         formtext_f.position(260, 315);
         formtext_f.style("font-size", "30px");
