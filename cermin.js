@@ -4070,7 +4070,7 @@ function draw() {
           formtext_equal2.position(843, 280);
           formtext_equal2.style("font-size", "50px");
           formtext_equal2.style("color", "#2B4162");
-  
+          
           if (formtext13) {
             formtext13.remove();
           }
